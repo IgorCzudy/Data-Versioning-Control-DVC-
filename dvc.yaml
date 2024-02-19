@@ -1,11 +1,10 @@
 stages:
   prepare:
-    cmd: python prepare.py data/adult.data
+    cmd: python featurize.py data/prepared/ data/features/
     params:
-      - prepare.seed
-      - prepare.split
+      - featurize.degree
     deps:
-      - prepare.py
-      - data/adult.data
+      - featurize.py 
+      - data/prepared/
     outs:
-      - data/prepared
+      - data/features

@@ -1,3 +1,5 @@
 prepare:
   split: 0.75
   seed: 42
+featurize:
+  degree: 2
