@@ -1,0 +1,11 @@
+stages:
+  prepare:
+    cmd: python prepare.py data/adult.data
+    params:
+      - prepare.seed
+      - prepare.split
+    deps:
+      - prepare.py
+      - data/adult.data
+    outs:
+      - data/prepared

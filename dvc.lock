@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python prepare.py data/adult.data
+    deps:
+    - path: data/adult.data
+      hash: md5
+      md5: 5d7c39d7b8804f071cdd1f2a7c460872
+      size: 3974305
+    - path: prepare.py
+      hash: md5
+      md5: 0167d35b1fadcf46702ba440694242d4
+      size: 643
+    params:
+      params.yaml:
+        prepare.seed: 42
+        prepare.split: 0.75
+    outs:
+    - path: data/prepared
+      hash: md5
+      md5: b68e3088253d32d5b8c808fe9c8ce105.dir
+      size: 3995626
+      nfiles: 2
